@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+  <h1>YouTube Clone</h1>
+  <div id="uploadForm">
+    <input type="text" id="username" placeholder="Username">
+    <input type="file" id="videoFile">
+    <input type="text" id="videoTitle" placeholder="Video Title">
+    <button onclick="uploadVideo()">Upload</button>
+  </div>
+  <hr />
+  <h2>Videos</h2>
+  <div id="videoFeed"></div>
+  <div id="commentsSection" style="display: none;">
+    <h3 id="selectedVideoTitle"></h3>
+    <video id="selectedVideoPlayer" controls width="480"></video>
+    <div id="commentsList"></div>
+    <input type="text" id="newComment" placeholder="Add a comment">
+    <button onclick="postComment()">Post</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
